@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <title>Killua's World</title>
+      <style>
+        .slideshow {display:none;}
+      </style>
+
+    <!--links to css -->
+      <link  href="main.css" rel="stylesheet" media="screen">
+
+</head>
+
+<!-- main header for website -->
+<body>
+  <header>
+    <h1>Killua's World!</h1>
+  </header>
+
+  <!-- navigation bar -->
+  <div id="wrap">
+    <nav>
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Testimonials.html">Testimonials</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>	
+    </nav>
+
+    <h1>Welcome to My World!</h1>
+    <!-- all content -->
+    <div id="left">
+      <h2>Hi I'm Killua :)</h2>
+      <p>I'm a 1 and a half-year-old Korat Cat. I'm named after the
+      character from the anime show called Hunter
+      x Hunter, which is fitting because I love to hunt and play. I 
+      have short, soft grey hair that compliments my piercing green eyes,
+      which always seem to capture attention. I'm known as the wet food connoisseur, 
+      I take my meals very seriously and have a discerning palate when 
+      it comes to choosing my favorite flavors. I take my meals very
+      seriously, and I expect nothing but the best. Overall, I am a curious 
+      and adventurous feline who enjoys exploring new places and meeting
+      new people.
+      </p>
+      <img src="images/Home-Main.JPG" width="250" height="400" alt="sitting at window"/>
+    </div>
+
+    <section> 
+      <h2>What I like to Do</h2>
+        <p>Speaking of play, I love to play fetch - yes, you heard that right,
+          cats can fetch toys too! When I'm not busy hunting or playing, I go around 
+          the house and meowing as loudly at any closed doors until they're open for me.
+          Being the boss of the house takes up a lot of time and effort, but 
+          when I have free time I like to spend it hanging out with my tenants
+          (aka my owners).</p>
+
+          <img src="images/Home-Play.jpg" width="270" height="370" alt="playing with toy"/>
+    </section>
+
+    <aside>
+      <h2>My Job</h2>
+      <p>So if you're ever in need of some cardboard shredded, a box inspected,
+        or some neighborhood security, just give me a call - I'm your cat! I 
+        might be young, but I'm full of energy and always up for a good game 
+        of fetch. Plus, I guarantee to bring a smile to your face with my cute 
+        and quirky personality. So don't be shy, come say hello to your favorite 
+        Professional Cardboard Muncher, Box Inspector, and Neighborhood Security
+          - Killua the Korat Cat!
+      </p>
+
+      
+      <div class="jobSlides">
+        <h3 class="slide1">Box Inspector <br> <img src="images/Home-Box.jpg" width="300" height="325" alt="sitting in box"/></h3>
+        <h3 class="slide1">Cardboard Shredder<br> <img src="images/Home-Cardboard.jpg" width="200" height="300" alt="chewed up cardboard"/></h3>
+        <h3 class="slide1">Neighbourhood Security<br> <img src="images/Home-Window.JPG" width="225" height="300" alt="standing on nightstand"/></h3>
+      </div>
+      
+      
+      <div class="prev-nextButtons">
+        <button class="previousButton" onclick="plusDivs(-1)">&#10094 Prev</button>
+        <button class="nextButton" onclick="plusDivs(+1)">Next &#10095;</button>
+      </div>
+    </aside>
+  </div>
+
+  
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("slide1");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length} ;
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex-1].style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
